@@ -4,7 +4,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Summary:	Open Collaboration Service providers library
-Name:		attica5
+Name:		attica
 Version:	5.46.0
 Release:	1
 License:	GPLv2+
@@ -17,6 +17,8 @@ BuildRequires:	pkgconfig(Qt5Test)
 BuildRequires:	cmake(Qt5Widgets)
 BuildRequires:	cmake(ECM)
 BuildRequires:	pkgconfig(egl)
+# Remains from renaming...
+Obsoletes:	attica5-debuginfo < %{EVRD}
 
 %description
 A library to access Open Collaboration Service providers 
@@ -25,6 +27,7 @@ Required to access OSC providers in get hot new stuff.
 %package -n %{libname}
 Summary:	Open Collaboration Service providers library, part of KDE Frameworks 5
 Group:		System/Libraries
+Obsoletes:	%{mklibname attica 0.4} < %{EVRD}
 
 %description -n %{libname}
 A library to access Open Collaboration Service providers 
@@ -38,6 +41,7 @@ Group:		Development/KDE and Qt
 Requires:	%{libname} = %{EVRD}
 Provides:	%{name}-devel = %{EVRD}
 Obsoletes:	%{name}-devel < 0.4.1-2
+Obsoletes:	%{mklibname attica -d} < %{EVRD}
 
 %description -n %{devname}
 This package contains header files needed if you wish to build applications
