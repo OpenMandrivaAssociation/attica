@@ -17,6 +17,7 @@ BuildRequires:	pkgconfig(Qt5Test)
 BuildRequires:	cmake(Qt5Widgets)
 BuildRequires:	cmake(ECM)
 BuildRequires:	pkgconfig(egl)
+BuildRequires:	doxygen
 # Remains from renaming...
 Obsoletes:	attica5-debuginfo < %{EVRD}
 
