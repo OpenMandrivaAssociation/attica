@@ -17,7 +17,9 @@ BuildRequires:	pkgconfig(Qt5Test)
 BuildRequires:	cmake(Qt5Widgets)
 BuildRequires:	cmake(ECM)
 BuildRequires:	pkgconfig(egl)
+# For building QCH docs
 BuildRequires:	doxygen
+BuildRequires:	qt5-assistant
 # Remains from renaming...
 Obsoletes:	attica5-debuginfo < %{EVRD}
 
@@ -48,6 +50,14 @@ Obsoletes:	%{mklibname attica -d} < %{EVRD}
 This package contains header files needed if you wish to build applications
 based on %{name}.
 
+%package -n %{name}-devel-docs
+Summary: Developer documentation for %{name} for use with Qt Assistant
+Group: Documentation
+Suggests: %{devname} = %{EVRD}
+
+%description -n %{name}-devel-docs
+Developer documentation for %{name} for use with Qt Assistant
+
 %prep
 %setup -q -n attica-%{version}
 %cmake_kde5
@@ -71,3 +81,6 @@ based on %{name}.
 %{_libdir}/pkgconfig/libKF5Attica.pc
 %{_libdir}/cmake/KF5Attica
 %{_libdir}/qt5/mkspecs/modules/*.pri
+
+%files -n %{name}-devel-docs
+%{_docdir}/qt5/*.{tags,qch}
