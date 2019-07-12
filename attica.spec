@@ -5,7 +5,7 @@
 
 Summary:	Open Collaboration Service providers library
 Name:		attica
-Version:	5.59.0
+Version:	5.60.0
 Release:	1
 License:	GPLv2+
 Group:		System/Base
@@ -69,7 +69,7 @@ Developer documentation for %{name} for use with Qt Assistant
 %ninja_install -C build
 
 %files -n %{libname}
-%{_sysconfdir}/xdg/attica.categories
+%{_datadir}/qlogging-categories5/attica.categories
 %{_libdir}/libKF5Attica.so.%{version}
 %{_libdir}/libKF5Attica.so.%{major}
 
