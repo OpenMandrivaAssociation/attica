@@ -5,8 +5,8 @@
 
 Summary:	Open Collaboration Service providers library
 Name:		attica
-Version:	5.74.0
-Release:	3
+Version:	5.75.0
+Release:	1
 License:	GPLv2+
 Group:		System/Base
 Url:		http://www.kde.org/
