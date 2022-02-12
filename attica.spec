@@ -5,7 +5,7 @@
 
 Summary:	Open Collaboration Service providers library
 Name:		attica
-Version:	5.90.0
+Version:	5.91.0
 Release:	1
 License:	GPLv2+
 Group:		System/Base
@@ -76,7 +76,6 @@ Developer documentation for %{name} for use with Qt Assistant
 
 %files -n %{devname}
 %dir %{_includedir}/KF5
-%{_includedir}/KF5/attica_version.h
 %{_includedir}/KF5/Attica
 %{_libdir}/libKF5Attica.so
 %{_libdir}/pkgconfig/libKF5Attica.pc
