@@ -9,7 +9,7 @@ Version:	5.116.0
 Release:	1
 License:	GPLv2+
 Group:		System/Base
-Url:		http://www.kde.org/
+Url:		https://www.kde.org/
 Source0:	http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/attica-%{version}.tar.xz
 BuildRequires:	pkgconfig(Qt5Core)
 BuildRequires:	pkgconfig(Qt5Network)
